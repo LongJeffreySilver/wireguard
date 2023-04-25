@@ -1,4 +1,3 @@
-#sudo pip install python_wireguard
 #pip install ops
 
 #! /usr/bin/env python3
