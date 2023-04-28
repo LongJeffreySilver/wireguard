@@ -132,7 +132,7 @@ class wg_services:
             client_ip = self.free_IP_list.pop(0)
             
             server_conf_file = open("/etc/wireguard/"+ self.server_name + ".conf","a")
-            new_client = "[Peer]\n" + "PublicKey = " + client_key_string + "\n"+ "AllowedIPs = " + client_ip + "/32\n" + "PersistentKeepAlive = 25\n" + "\n"
+            new_client = "\n[Peer]\n" + "PublicKey = " + client_key_string + "\n"+ "AllowedIPs = " + client_ip + "/32\n" + "PersistentKeepAlive = 25\n" + "\n"
 
             server_conf_file.write(new_client)
 
