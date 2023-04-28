@@ -182,7 +182,7 @@ class charm:
         wireguard.generate_keys()
         wireguard._on_init_config_action()
         wireguard._on_get_server_data_action()
-        wireguard._on_get_private_IP_action(wireguard.free_IP_list)
+        wireguard._on_get_private_IP_action()
         '''
         wireguard._on_dissconnect_client_action()
         '''
