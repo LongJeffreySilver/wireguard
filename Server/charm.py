@@ -142,7 +142,7 @@ class wg_services:
             time.sleep(5)
 
             print("Client added")
-            print("This is your private IP: " + client_ip)
+            print("This is your private IP: " + client_ip + "/32")
             '''event.set_results({
                     "output": f"Server started successfully: \n {new_client}"
             })'''
