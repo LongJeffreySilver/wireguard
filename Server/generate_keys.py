@@ -6,7 +6,7 @@ import subprocess
 
 file = open('/etc/wireguard/public_key.key.pub', 'w')
 
-processWg = subprocess.Popen(["wg", "genkey"], stdout=subprocess.PIPE) #Saca los registros de vulnerabilidades de los ultimos 20 dias
+processWg = subprocess.Popen(["wg", "genkey"], stdout=subprocess.PIPE)
 
 processTee = subprocess.Popen(["tee", "private_key.key"], stdin=processWg.stdout, stdout=subprocess.PIPE) 
 
