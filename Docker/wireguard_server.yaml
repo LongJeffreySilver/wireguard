@@ -1,0 +1,16 @@
+#Command to launch: sudo docker-compose -f wireguard_server.yaml up &
+#sudo docker container ls
+#sudo docker exec -it IDCONTENEDOR bash
+version: '3.7'
+services:
+    wireguard_server:
+        restart: always
+        image: wireguard_server:latest
+        hostname: wireguard_server
+        stdin_open: true
+        network_mode: "host"
+        tty: true
+        #command: ["/bin/bash","-ce","tail -f /dev/null"]
+        privileged: true
+        volumes:
+          - /sys/fs/cgroup:/sys/fs/cgroup:ro
