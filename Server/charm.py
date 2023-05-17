@@ -77,7 +77,7 @@ class wg_services:
                 + "PrivateKey = " + server_priv_key
                 + "ListenPort = " + server_listening_port + "\n"
                 + "PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o " + iface_name + " -j MASQUERADE\n"## Cambiar la interfaz de red enp0s3 por la que tenga el servidor
-                + "PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o " + iface_name + "-j MASQUERADE" ## Cambiar la interfaz de red enp0s3 por la que tenga el servidor
+                + "PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o " + iface_name + " -j MASQUERADE" ## Cambiar la interfaz de red enp0s3 por la que tenga el servidor
                 )
                 conf_file.close()
 
